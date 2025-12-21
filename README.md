@@ -45,13 +45,13 @@ $	conda activate testenv
 $	python --version 
 
 #### VSCode ####
-1.	Install the key and yum repository by running the following script:
+1. Install the key and yum repository by running the following script:
 
 $ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
 $ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
   
-2.	Then update the package cache and install the package using dnf (Fedora 22 and above):
+2. Then update the package cache and install the package using dnf (Fedora 22 and above):
 
 $ dnf check-update
 $ sudo dnf install code # or code-insiders
@@ -60,10 +60,13 @@ To check open VSCode &rarr terminal &rarr try to run a Linux command (sudo, cond
 
 ### 1. BlueSky ###
 This is the flight simulator. It is used to generate flight and its trajectories. It outputs csv files containing trajectory information to be fed to gps-sdr-sim (the next block). 
+
 (You must have the newest Python 3.13.7)
+
 Inside the VSCode
 $ python -- version
 -	Must be 3.13.7
+  
 $ git clone https://github.com/kabartsjc/bluesky.git
 
 $ pip install bluesky-simulator[full]
