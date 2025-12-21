@@ -26,15 +26,22 @@ $ echo $DESKTOP_SESSION
 
 #### Anaconda ####
 As a regular user:
--	Download Anaconda (Python 3.13 64-bit (x86) installer (please do not use the Miniconda)
+Download Anaconda (Python 3.13 64-bit (x86) installer (please do not use the Miniconda)
+  
 $	chmod +x installer-package
-o	yes for all the options
+  o	yes for all the options
+  
 $	source ~/.bashrc
+
 Test installation
 $	conda list
+
 $	conda –version
+
 $	conda create -n testenv python=3.11
+
 $	conda activate testenv
+
 $	python --version 
 
 #### VSCode ####
