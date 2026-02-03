@@ -155,11 +155,13 @@ Options:
   -v               Show details about simulated channels
 ```
 
+Now, we need the GPS broadcast ephemeris file. Use the following link to extract the latest brdc file https://cddis.nasa.gov/archive/gnss/data/daily/. Make sure to register for free using your username and password. After you register, login and then use the link given to get the GNSS daily brdc file. The brdc file should match with the date of execution. So, if brdc files says brdc****.n file where the 4 digit number shows the day of the year e.g. 3020 is the 302nd day of the year. In the brdc****.n then represents the GPS satellite. Other variables represent other types of satellites like GLONASS, etc. 
+
 Sample run:
 ```
 $./gps-sdr-sim -e brdc3020.n -l 52.3 4.5 8453 -s 4000000 -b 8 -o output.bin
 ```
-The above command should create an output file containing the I/Q samples. These samples can be read & analyzed using GNU-radio. However, we will feed this output file to the GNSS-SDR (the receiver block). 
+In the above sample run, read the configuration parameters given above. E.g. -e is used to provide the brdc file, -l to provide the static location of the aircraft, -s is the sampling frequency (note - use the same sampling frequency in the config file of the receiver, GNSS-SDR, that you will do in the next step). The above command should create an output file "output.bin" (feel free to modify the name of the output file, but make sure you use the path and the file name in the receiver block) containing the I/Q samples. These samples can be read & analyzed using GNU-radio. However, we will feed this output file to the GNSS-SDR (the receiver block). 
 
 ### 3. GNSS-SDR ###
 
