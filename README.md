@@ -199,6 +199,9 @@ Cloning the GNSS-SDR repository as in the line above will create a folder named 
  |---tests      <- QA code.
  |---utils      <- some utilities (e.g. Matlab scripts).
 ```
+```
+$ sudo dnf install gmp-devel
+```
 
 Build and install GNSS-SDR
 Go to GNSS-SDR's build directory:
