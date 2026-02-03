@@ -155,6 +155,11 @@ Options:
   -v               Show details about simulated channels
 ```
 
+### Ephemeris file
+Copy the epheeris file from this website: https://urs.earthdata.nasa.gov/oauth/authorize?client_id=gDQnv1IO0j9O2xXdwS8KMQ&response_type=code&redirect_uri=https%3A%2F%2Fcddis.nasa.gov%2Fproxyauth&state=aHR0cDovL2NkZGlzLm5hc2EuZ292L2FyY2hpdmUvZ25zcy9kYXRhL2RhaWx5Lw
+
+
+
 Sample run:
 ```
 $./gps-sdr-sim -e brdc3020.n -l 52.3 4.5 8453 -s 4000000 -b 8 -o output.bin
