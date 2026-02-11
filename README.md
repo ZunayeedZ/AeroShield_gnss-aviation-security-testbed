@@ -4,9 +4,7 @@ This repository contains the full implementation of a high-fidelity GNSS simulat
 ## System Setup ##
 The entire system architecture is shown below. 
 
-
-![SysArch](https://github.com/user-attachments/assets/9aca5567-4658-4ff8-90e5-80bdbe92b432)
-
+![SysArch3](https://github.com/user-attachments/assets/cdec9659-4728-4736-b07e-b0f1f1d2e417)
 
 For the end-to-end simulation, it consists of 3 major sections: 
 1. BlueSky:
