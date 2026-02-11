@@ -232,3 +232,14 @@ $ cd ~/gnss-sdr/conf
 $ gnss-sdr --config_file=my_receiver.conf
 ```
 If the above steps doesn't work, if there is any issue or you need to see the expected output, use the following reference: https://gnss-sdr.org/my-first-fix/
+
+## Attack Module ##
+If the above sequence of scripts work properly, you have just implemented an end-to-end GNSS pipeline with a regular (un-jammed & un-spoofed) signal. Now, to introduce jamming & spoofing, the following sections will explain the details. 
+### Jamming Implementation
+Jammer transmits strong interference signal on the same frequency band, causing the receiver to lose the desired signal
+- Complex baseband signal, 𝑥[𝑛]=𝐼[𝑛]+𝑗𝑄[𝑛]
+- Received Jammed-Signal, 𝑦[𝑛]=𝑥[𝑛]+𝑤[𝑛], where, 𝑤[𝑛]  ~ 𝐶𝑁(0,2𝜎^2)
+- Jammer strength, 𝜎= 𝛼∗𝑥_𝑅𝑀𝑆,      𝑥_𝑅𝑀𝑆= √(1/𝑁  ∑_(𝑛=0)^(𝑁−1)▒〖𝑥^2 [𝑛]〗) 
+
+
+### Spoofing Implementation
